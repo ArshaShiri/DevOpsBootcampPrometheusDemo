@@ -101,5 +101,5 @@ The newly created alert can be seen in the Prometheus UI as well:
 
 To simulate extra CPU load for triggering the new alert we can use [cpustress](https://hub.docker.com/r/containerstack/cpustress):
 
-    kubectl run cpu-test --image=containerstack/cpustress --cpu 4 --timeout 30s --metrics-brief
+    kubectl run cpu-test --image=containerstack/cpustress -- --cpu 4 --timeout 30s --metrics-brief
     
