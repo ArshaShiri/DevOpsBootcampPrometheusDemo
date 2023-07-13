@@ -94,3 +94,7 @@ We can now get the newly created rule:
     kubectl get pod -n monitoring
 
     kubectl logs prometheus-monitoring-kube-prometheus-prometheus-0 -n monitoring -c config-reloader
+
+The newly created alert can be seen in the Prometheus UI as well:
+
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/63f1087d-2513-4bbf-a97b-f284d92793f2)
