@@ -78,6 +78,9 @@ Also, the frontend service can be observed taking a lot of resources:
 ![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/73a85ac0-f508-442f-a3bf-dcb885bd1ad1)
 
 
+## Alert Rules in Prometheus
 
-    
-        
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/68f16f97-7df4-41e3-9128-2b5985ee1719)
+
+We now create two new alert rules. One fires when the CPU usage exceeds 50% and the other when a pod cannot start.
+
