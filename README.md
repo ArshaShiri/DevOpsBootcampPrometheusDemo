@@ -108,3 +108,8 @@ To simulate extra CPU load for triggering the new alert we can use [cpustress](h
     kubectl port-forward service/monitoring-kube-prometheus-alertmanager -n monitoring 9093:9093 &
 
 ![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/eb9505fd-47dc-4067-b29c-a22bd5195a80)
+
+The files `alert-manager-configuration.yaml` and `email-secrete.yaml` are added to enable alert manager to send emails in case of alert firing.
+
+    kubectl apply -f email-secrete.yaml
+    kubectl apply -f alert-manager-configuration.yaml
