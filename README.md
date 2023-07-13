@@ -84,3 +84,13 @@ Also, the frontend service can be observed taking a lot of resources:
 
 We now create two new alert rules. One fires when the CPU usage exceeds 50% and the other when a pod cannot start.
 
+After creating `alert-rules.yaml` we can apply it by `kubectl apply -f alert-rules.yaml`.
+
+We can now get the newly created rule:
+
+    # We can see main-rules in the list
+    kubectl get PrometheusRule -n monitoring
+
+    kubectl get pod -n monitoring
+
+    kubectl logs prometheus-monitoring-kube-prometheus-prometheus-0 -n monitoring -c config-reloader
