@@ -103,3 +103,8 @@ To simulate extra CPU load for triggering the new alert we can use [cpustress](h
 
     kubectl run cpu-test --image=containerstack/cpustress -- --cpu 4 --timeout 30s --metrics-brief
     
+## Configure Alert Manager
+
+    kubectl port-forward service/monitoring-kube-prometheus-alertmanager -n monitoring 9093:9093 &
+
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/eb9505fd-47dc-4067-b29c-a22bd5195a80)
