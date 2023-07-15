@@ -113,3 +113,20 @@ The files `alert-manager-configuration.yaml` and `email-secrete.yaml` are added 
 
     kubectl apply -f email-secrete.yaml
     kubectl apply -f alert-manager-configuration.yaml
+
+## Deploy Redis Exported
+
+We use [this](https://github.com/oliver006/redis_exporter) exporter which we install by [this](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-redis-exporter) helm chart.
+
+    helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+    helm repo update
+    helm install redis-exporter prometheus-community/prometheus-redis-exporter -f redis-values.yaml
+
+    # We can check all the installed components now
+    helm ls
+
+    kubectl get pod
+
+    kubectl get servicemonitor
+
+A lot of alert templates can be accessed [here](https://samber.github.io/awesome-prometheus-alerts/).
