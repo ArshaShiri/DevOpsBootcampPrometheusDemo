@@ -130,3 +130,5 @@ We use [this](https://github.com/oliver006/redis_exporter) exporter which we ins
     kubectl get servicemonitor
 
 A lot of alert templates can be accessed [here](https://samber.github.io/awesome-prometheus-alerts/).
+
+## Monitor Our Own Application
