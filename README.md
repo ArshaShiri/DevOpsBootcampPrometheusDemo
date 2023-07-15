@@ -151,3 +151,16 @@ We add two metrics to our Node app: Number of requests & Duration of requests
 We now have to configure Prometheus to scrape new target (ServiceMonitor). Subsequently, we can visualize the data in Grafana dashboard.
 
 This part can be found in `k8s-config.yaml` under `ServiceMonitor`
+
+The node app can be seen in Prometheus UI:
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/e43fdf69-4bae-4c3f-bea6-2eabb14b44c0)
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/d44afd3b-6296-4365-aa00-73787afafb5e)
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/eda4a36e-f20a-4367-84ae-2506fa76947d)
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/28176a6d-e911-497b-8a3d-9c1fdb72eb2a)
+
+The same query can be run in Grafana:
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/0b562a6c-88a5-4cb1-8b2b-ac5231c6fc4e)
+
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/d96bcc47-a176-4488-9f90-b788dd53e9cd)
+![image](https://github.com/ArshaShiri/DevOpsBootcampPrometheusDemo/assets/18715119/4a3452ed-f0e0-4f82-b4f0-b9c04ee79e19)
+
