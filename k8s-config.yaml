@@ -18,10 +18,10 @@ spec:
       - name: my-registry-key
       containers:
       - name: nodeapp
-        image: nanajanashia/demo-app:nodeapp
+        image: arshashiri/demo-app:nodeapp
         ports:
         - containerPort: 3000
-        imagePullPolicy: Always  
+        imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service

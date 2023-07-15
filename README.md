@@ -132,3 +132,22 @@ We use [this](https://github.com/oliver006/redis_exporter) exporter which we ins
 A lot of alert templates can be accessed [here](https://samber.github.io/awesome-prometheus-alerts/).
 
 ## Monitor Our Own Application
+
+We add two metrics to our Node app: Number of requests & Duration of requests
+
+
+    docker build -t arshashiri/demo-app:nodeapp .
+    docker login
+    docker push arshashiri/demo-app:nodeapp
+
+    # To enable our K8 cluster access to dockerhub to download the nodeapp
+    kubectl create secret docker-registry my-registry-key --docker-server=https://index.docker.io/v1/ --docker-username=#### --docker-password=####
+
+    kubectl apply -f k8s-config.yaml
+    kubectl get svc
+
+    kubectl port-forward svc/nodeapp 3000:3000 &
+
+We now have to configure Prometheus to scrape new target (ServiceMonitor). Subsequently, we can visualize the data in Grafana dashboard.
+
+This part can be found in `k8s-config.yaml` under `ServiceMonitor`
